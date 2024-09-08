@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="myheader">Line 1 Heading</h1>
+    <p class="myp">Line 2 paragraph</p>
+    <input type="button" value="Submit" onclick="myFun();">
+</body>
+<script>
+    function myFun() {
+        //alert('Hi');
+        let heading = document.getElementById('myheader');
+        heading.innerHTML = 'New Heading!';
+        document.querySelector('.myp').style.color = 'Red'
+        let p_Content = document.getElementsByClassName('myp');
+        console.log(p_Content)
+        p_Content.innerHTML = p_Content[0].innerText + ' Extra text';
+        console.log(p_Content.innerHTML)
+        document.querySelector('.myp').innerHTML = p_Content.innerHTML;
+    }
+</script>
+</html>
